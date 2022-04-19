@@ -1,0 +1,42 @@
+<!-- <div>
+    <app-headingname></app-headingname>
+</div> -->
+<div>
+    <app-customerheader></app-customerheader>
+</div>
+<div class="container-fluid">
+    <ul class="global-menu">
+        <li class="menu-item">
+            <span class="item-box" [routerLink]="['/customerhome']" routerLinkActive="active">
+                <mat-icon fontSet="material-icons-outlined"> home</mat-icon>
+                <span> Customer Home </span>
+            </span>
+        </li>
+    </ul>
+    <div class="text-secondary fs-4 mb-3"> Bill</div>
+    <table class="tablepro">
+        <tr>
+            <th>Bill Id</th>
+            <th>Bill Date</th>
+            <!-- <th>Total Item</th> -->
+            <th>Item Name</th>
+            <th>Item Quantity</th>
+            <th>Total Cost</th>
+        </tr>
+        <!-- <tr *ngFor="let order of orderedItemDetails"> -->
+        <tr>
+            <!-- <tr> -->
+            <td>{{ItemBillDetails.billId}}</td>
+            <td>{{ItemBillDetails.billDate}}</td>
+            <!-- <td>{{ItemBillDetails.totalItem}}</td> -->
+            <td>{{ItemBillDetails.orderdetails.itemName}}</td>
+            <td>{{ItemBillDetails.orderdetails.itemQuantity}}</td>
+            <td>{{ItemBillDetails.orderdetails.totalPrice}}</td>
+
+            <!-- <td></td> -->
+            <!-- <td>{{orderedItemDetails.items[0].itemName | json}}</td>
+                <td> {{orderedItemDetails.items[0].itemPrice | json}}</td> -->
+            <!-- <td><button class="orderbtn" (click)="billinform()"> Bill</button></td> -->
+        </tr>
+    </table>
+</div>

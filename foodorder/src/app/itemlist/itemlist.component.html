@@ -1,0 +1,31 @@
+<div>
+  <app-customerheader></app-customerheader>
+</div>
+<div class="container-fluid">
+  <div class="text fs-4 m-3">Item
+    <button class="GoCart float-left" (click)="goToCart()">Go cart</button>
+  </div>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let item of itemsList; let i = index">
+      <div class=" card mb-2">
+        <p><img class="card-img-top" [src]="'assets/'+item.itemImageName+'.jpg'"></p>
+        <p><b>itemName</b> : <span>{{item.itemName}} </span></p>
+        <p><b>itemPrice</b> : <span>{{item.itemPrice}}</span></p>
+        <p><b>itemDescription</b>: <span>{{item.itemDescription}}</span></p>
+        <!-- <li><b>Quantity </b> : <input type="number" name="quantity" [(ngModel)]="quantityItemValue"></li> -->
+        <p><b>itemQuantity</b>: <span>
+            <button class="minus" (click)="minusQuantity(item)">-</button>
+            <input name="quantity" [(ngModel)]="item.quantity" type="text" [class]="'quantity'+i" #quantityValueChanged
+              (change)="updateInputValuebyId(i)"></span>
+          <button class="plus" (click)="plusQuantity(item)">+</button>
+        </p>
+        <p>
+          <button class="add-to-cart" (click)="cartBtn(quantityValueChanged,item)">Add to cart</button>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

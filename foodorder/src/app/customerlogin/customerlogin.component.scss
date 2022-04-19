@@ -1,0 +1,143 @@
+// .container {
+//     float: center;
+//     border: 1px solid #b0b0b3;
+//     //  margin-top:30px;
+// }
+
+// .login-form {
+//     //  margin-top: 40px;
+//     margin: 0px 0px 0px 330px;
+
+
+//     .spanlogin {
+//         // font-weight: 600;
+//         font-size: 25px;
+//         color: #90929c;
+
+//     }
+
+//     .textColor {
+//         color: darkcyan;
+//     }
+.mainAccount {
+    margin: 0px 0px 10px 60px;
+    font-size: 16px;
+}
+
+.loginaccount {
+    display: inline-block;
+    //  margin-top: 10px;
+    margin-left: 59px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 10px;
+    //color: #fc8019; 
+    color: darkcyan;
+    cursor: pointer;
+}
+
+//     .form-group {
+//         input {
+//             margin-top: 5px;
+//             font-size: 14px;
+//             padding: 9px;
+//             // width: 50%;
+//             width: 295px;
+//         }
+
+//     }
+
+//     .button-box {
+//         .Submitbtn {
+//             background-color: darkcyan;
+//             color: #ffffff;
+//             // border: 1px solid cyan;
+//             border-radius: 4px;
+//             outline: none;
+//             padding: 8px 12px;
+//             //margin-bottom: 0;
+//             font-size: 14px;
+//             font-weight: 400;
+//             width: 295px;
+//         }
+//     }
+
+//     // .submitbtn {
+//     //  padding: 8px 20px 8px 20px;
+//     //  font-size: 15px;
+//     //  border-radius: 7px;
+//     // }
+// }
+
+.userrequired {
+    color: red;
+    font-size: 14px;
+
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.log-page {
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 5px 5px #d4d4d4;
+    border-radius: 10px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    //  font-family: serif;
+    // color: rgba(128, 128, 128, 0.747);
+    color: darkcyan;
+    margin: 70px 0px 40px;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+}
+
+.log-input {
+    margin: 0px 60px 20px;
+}
+
+input.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.log-btn {
+    width: 380px;
+    background-color: darkcyan !important;
+    margin-top: 10px;
+
+}
+
+button.btn:focus {
+    box-shadow: none !important;
+}
+
+.labels::after {
+    content: "*";
+    color: red;
+    padding-left: 4px;
+    //  margin-bottom: 5px;
+}
+
+.labels {
+    margin-bottom: 5px;
+}

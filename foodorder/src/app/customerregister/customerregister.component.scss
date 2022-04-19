@@ -1,0 +1,77 @@
+//  .register-form{
+//  margin-top: 40px;
+//   margin: 20px 0px 10px 90px;
+// margin-left: 70px;
+// .container {
+//   display: flex;
+// }
+.container {
+  padding-top: 70px;
+}
+
+.mainAccount {
+
+  font-size: 16px;
+}
+
+.register_header {
+  margin-left: 35px;
+}
+
+.register-form {
+  // margin-top: 40px;
+  // margin: 30px 0px 10px 90px;
+
+  .registeraccount {
+    display: inline-block;
+    margin-top: 8pxpx;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 5px;
+    // color: #fc8019;
+    //  color: #198754 !important;
+    color: darkcyan;
+    cursor: pointer;
+  }
+
+  .fill_form {
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+
+  .form-group {
+    input {
+      margin: auto;
+      margin-top: 5px;
+      font-size: 14px;
+      padding: 8px;
+      width: 80%;
+
+    }
+  }
+}
+
+// .button-box
+// {
+//     .default-button{
+//        width:40%;
+//        height: 40px;
+//        background-color: darkcyan; 
+//        color: #fff;
+//        text-transform: capitalize;
+//      //  border-radius: 5px; 
+//     }
+// }
+//    }
+.btnText {
+  // margin: auto;
+  margin-left: 35px;
+}
+
+.colorrequired {
+  color: red;
+  font-size: 14px;
+  padding-left: 37px;
+  padding-top: 5px;
+}

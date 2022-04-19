@@ -1,0 +1,85 @@
+.onlinePage {
+  height: 503px;
+}
+
+.mainImage {
+  height: 80%;
+  width: 100%;
+}
+
+.row {
+  margin: 0px !important;
+}
+
+.imgs {
+  padding: 0px !important;
+}
+
+.content {
+  padding: 0px !important;
+}
+
+.customerLogin,
+.userLogin {
+  background-color: #008B8B;
+  color: #fff;
+}
+
+.navigation {
+  padding: 40px 60px 0px 60px !important;
+}
+
+.movieMarthon {
+  margin-top: 80px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -.45px;
+}
+
+.order {
+  font-size: 24px;
+  font-weight: 300;
+  width: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  letter-spacing: -.3px;
+  color: #686b78;
+}
+
+.popular {
+  font-weight: 400;
+  font-size: 15px;
+  color: #a9abb2;
+  margin: 30px 0 10px;
+  letter-spacing: -.2px;
+  text-transform: uppercase;
+}
+
+p span {
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 8px;
+  color: #686B78;
+  line-height: 1.5;
+  word-spacing: 50px !important;
+}
+
+span:nth-child(even) {
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 8px;
+  color: #93959F !important;
+  line-height: 1.5;
+  letter-spacing: -.3px;
+
+}
+
+.customerLogin {
+  margin-left: 50px;
+}
+
+.userLogin {
+  margin-left: 20px;
+}

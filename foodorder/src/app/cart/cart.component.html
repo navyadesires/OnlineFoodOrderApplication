@@ -1,0 +1,36 @@
+<div>
+   <app-customerheader></app-customerheader>
+</div>
+
+<div class="container-fluid">
+   <div class="text fs-4 m-3"> Cart</div>
+   <div class="textarea">
+      <label class="labels">Delivery Address</label> :
+      <input type="text" class="address" name="deliveryAddress" [(ngModel)]="shippingAddress"
+         placeholder="Please enter address">
+
+      <button class="orderbtn" [disabled]="shippingAddress === ''" (click)="placeOrder()">Place Order</button>
+   </div>
+   <div class="row">
+      <div class="col-md-3" *ngFor="let item of cartDetails?.cartItems; let i=index">
+         <!-- <ng-container > -->
+         <div class="card mb-2">
+            <p><b>Item Name </b> : {{item.items.itemName}} </p>
+            <p><b>Price </b> : {{item.items.itemPrice}} </p>
+            <p><b>Quantity </b> :
+               <span>
+                  <button class="minus" (click)="minusQuantity(item)">-</button>
+                  <input class="quantity" name="quantity" [(ngModel)]="item.quantity" type="text" [class]="'quantity'+i"
+                     #quantityValueChanged (change)="updateInputValuebyId(item)"></span>
+               <button class="plus" (click)="plusQuantity(item)">+</button>
+            </p>
+            <p><b>itemDescription</b> : {{item.items.itemDescription}}</p>
+            <p><b>Subtotal </b>: {{item.quantity * item.items.itemPrice}}</p>
+            <p>
+               <button class="deletebtn mt" (click)="onDeleteOrder(item.id)">Delete</button>
+            </p>
+         </div>
+         <!-- </ng-container> -->
+      </div>
+   </div>
+</div>

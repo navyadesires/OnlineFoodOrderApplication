@@ -1,0 +1,36 @@
+<div class="main-container">
+    <div class="log-page">
+        <h1 class="heading">Customer Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h2 class="loginaccount" (click)="createCAccount()"> Create Account </h2>
+            <div class="form-group log-input">
+                <label for="email" class="labels">Email address</label>
+                <input type="email" class="form-control" name="useremail" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter Email" formControlName="username">
+                <div
+                    *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)">
+                    <div class="userrequired" *ngIf="loginForm.controls['username'].errors?.['required']">
+                        Email is Required</div>
+                </div>
+                <div *ngIf="errMessage != undefined && errMessage != '' ">
+                    <small class="userrequired">{{errMessage}}</small>
+                </div>
+            </div>
+            <div class="form-group log-input">
+                <label for="exampleInputPassword1" class="labels">Password </label>
+                <input type="password" name="userpwd" formControlName="password" class="form-control" id="pwd"
+                    placeholder="Enter Password">
+                <div
+                    *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                    <small class="userrequired"> Password is Required </small>
+
+                </div>
+                <div *ngIf="pwdErrMessage != undefined && pwdErrMessage != '' ">
+                    <small class="userrequired">{{pwdErrMessage}} </small>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary log-input log-btn">Submit</button>
+        </form>
+    </div>
+</div>

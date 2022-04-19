@@ -1,0 +1,35 @@
+<div class="header-container">
+    <div class="contain">
+        <a class="logo" routerLink="restaurant">
+            <img class="_8pSp-" viewBox="0 0 16 25" height="59" width="69" fill="#fc8019" src="./assets/logo.webp">
+        </a>
+
+        <div class="address-box">
+            <!-- <span class="home">Home</span> -->
+            <span class="address">Marunji Rd, Marunji Village, Hinjawadi, Marunji, Maharashtra 411033, India</span>
+            <mat-icon fontSet="material-icons-outlined" class="icon">keyboard_arrow_down</mat-icon>
+        </div>
+        <ul class="global-menu">
+            <li class="menu-item">
+                <span class="item-box" [routerLink]="['/openingpage']" routerLinkActive="active" (click)="logout()">
+                    <mat-icon fontSet="material-icons-outlined">logout</mat-icon>
+                    <span> Logout </span>
+                </span>
+            </li>
+            <li class="menu-item">
+                <span class="item-box">
+                    <mat-icon fontSet="material-icons-outlined">person</mat-icon>
+                    <span> {{userName}} </span>
+                    <span>
+                    </span>
+                </span>
+            </li>
+            <li class="menu-item">
+                <span class="item-box" [routerLink]="['/customerhome']" routerLinkActive="active">
+                    <mat-icon fontSet="material-icons-outlined">home</mat-icon>
+                    <span> Home </span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

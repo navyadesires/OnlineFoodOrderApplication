@@ -1,0 +1,57 @@
+.labels {
+  margin-bottom: 30px;
+  font-size: 17px;
+  margin-right: 17px;
+}
+
+.address {
+  width: 20%;
+  font-size: 16px;
+}
+
+.quantity {
+  width: 6%;
+  background: transparent;
+  border: none;
+}
+
+.card {
+  border: 1px solid darkcyan;
+  padding: 10px;
+
+  p {
+    b {
+      width: 110px;
+      display: inline-block;
+    }
+  }
+}
+
+.minus {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+}
+
+.plus {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+}
+
+.orderbtn {
+  float: right;
+  background-color: darkcyan;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.deletebtn {
+  padding: 5px 15px 8px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: darkcyan;
+}

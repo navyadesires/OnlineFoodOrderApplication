@@ -1,0 +1,60 @@
+.card {
+  // border: 2px solid green;
+  border: 1px solid darkcyan;
+  padding: 10px;
+
+  p {
+    b {
+      width: 110px;
+      display: inline-block;
+    }
+  }
+}
+
+
+
+.page-title {
+  font-size: 120%;
+  text-align: left;
+  margin: 10px 0px;
+}
+
+.totalcount {
+  // margin-bottom:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tablepro {
+  width: 100%;
+  border-collapse: collapse;
+  // margin-left:50px;
+}
+
+.tablepro td,
+.tablepro th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tablepro th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  // background-color: #04AA6D;
+  background-color: #198754;
+  //background-color: darkcyan;
+  color: white;
+  text-align: center;
+  padding: 7px;
+}
+
+.tablepro td {
+  text-align: center;
+  padding: 5px;
+}
+
+// .btnColor {
+//   background-color: #198754;
+//   border-radius: 2px;
+// }

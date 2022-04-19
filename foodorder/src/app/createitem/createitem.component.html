@@ -1,0 +1,61 @@
+<div>
+    <app-restaurantheader></app-restaurantheader>
+</div>
+
+<div class="wrapper">
+    <div class="log-page bg-light p-4 main-log">
+        <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            <h1>Create Item</h1>
+            <div class="form-group log-input">
+                <label for="text" class="labels">Item Name</label>
+                <input type="text" class="form-control input-type" name="useremail" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" formControlName="itemName">
+                <div
+                    *ngIf="createForm.controls['itemName'].invalid && (createForm.controls['itemName'].dirty || createForm.controls['itemName'].touched) ">
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemName'].errors?.['required']">
+                        Item Name is Required</div>
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemName'].errors?.['pattern']">
+                        Accepts Alphabits only </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="text" class="labels"> Item Price</label>
+                <input type="text" class="form-control input-type" name="useremail" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" formControlName="itemPrice">
+                <div
+                    *ngIf="createForm.controls['itemPrice'].invalid && (createForm.controls['itemPrice'].dirty || createForm.controls['itemPrice'].touched) ">
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemPrice'].errors?.['required']">
+                        Item Price is Required</div>
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemPrice'].errors?.['pattern']">
+                        Accepts Numbers only </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="text" class="labels"> Item Description </label>
+                <input type="text" class="form-control input-type" formControlName="itemDescription">
+                <div
+                    *ngIf="createForm.controls['itemDescription'].invalid && (createForm.controls['itemDescription'].dirty || createForm.controls['itemDescription'].touched) ">
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemDescription'].errors?.['required']">
+                        Item Descriptiom is Required</div>
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemDescription'].errors?.['pattern']">
+                        Accepts Alphabits only </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="text" class="labels">Item Image </label>
+                <input type="text" class="form-control input-type" formControlName="itemImageName">
+                <div
+                    *ngIf="createForm.controls['itemImageName'].invalid && (createForm.controls['itemImageName'].dirty || createForm.controls['itemImageName'].touched) ">
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemImageName'].errors?.['required']">
+                        Item Image Name is Required</div>
+                    <div class="showErrorMessage" *ngIf="createForm.controls['itemImageName'].errors?.['pattern']">
+                        Accepts Alphabits only </div>
+                </div>
+            </div>
+            <div class="button-box ms-3">
+                <button mat-raised-button class="submit-btn">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>

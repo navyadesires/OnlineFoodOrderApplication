@@ -1,0 +1,36 @@
+<div>
+  <app-restaurantheader></app-restaurantheader>
+</div>
+<div class="container-fluid">
+  <div class="page-title m-3">Item</div>
+
+  <div class="row  ms-1">
+    <div class="col-md-3" *ngFor="let resItem of resItems">
+
+      <div class="card mb-2">
+        <!-- <div><img class="card-img-top" [src]="'assets/'+resItem.itemImageName+'.jpg'"></div> -->
+        <div class="form-group log-input">
+          <label for="text" class="labels">Item Name </label> :
+          <input type="text" name="itemPrice" class="form-control input-type" id="itemPrice"
+            [(ngModel)]="resItem.itemName" (keypress)="printCharacters($event)">
+        </div>
+        <div class="form-group log-input">
+          <label for="text" class="labels">ItemPrice</label> :
+          <input type="text" name="itemPrice" id="itemPrice" class="form-control input-type"
+            [(ngModel)]="resItem.itemPrice" (keypress)="printNumbers($event)">
+        </div>
+        <div class="form-group log-input">
+          <label for="text" class="labels"> Descripton</label>
+          : <input type=" text" name="itemDescription" class="form-control input-type" id="itemDescription"
+            [(ngModel)]="resItem.itemDescription" (keypress)="printCharacters($event)">
+        </div>
+        <div class="resitemlist mt-2">
+          <button class="btnText me-2" (click)="updateBtn(resItem)">Update </button>
+          <button class="btnText mt" (click)="deleteItemByItemId(resItem.itemId)">Delete</button>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>

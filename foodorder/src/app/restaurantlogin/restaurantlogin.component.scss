@@ -1,0 +1,124 @@
+// .login-form {
+//     margin: 0px 0px 10px 330px;
+
+//     .loginaccount {
+//         margin-top: 10px;
+//         font-weight: 500;
+//         margin-bottom: 5px;
+//         color: darkcyan;
+//         cursor: pointer;
+//     }
+
+//     .form-group {
+//         input {
+//             margin-top: 5px;
+//             font-size: 14px;
+//             padding: 9px;
+//             //  width: 35%;
+//             width: 295px;
+//         }
+//     }
+
+//     .button-box {
+//         .Submitbtn {
+//             background-color: darkcyan;
+//             color: #ffffff;
+//             border-radius: 4px;
+//             outline: none;
+//             padding: 8px 12px;
+//             font-size: 14px;
+//             font-weight: 400;
+//             width: 295px;
+//         }
+//     }
+// }
+.mainAccount {
+    margin: 0px 0px 10px 60px;
+    font-size: 16px;
+}
+
+.loginaccount {
+    display: inline-block;
+    //  margin-top: 10px;
+    margin-left: 59px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: darkcyan;
+    cursor: pointer;
+}
+
+.userrequired {
+    color: red;
+    font-size: 14px;
+
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.log-page {
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    border: 1px solid transparent;
+    //  box-shadow: 0px 0px 5px 5px #888888;
+    box-shadow: 0px 0px 5px 5px #d4d4d4;
+    border-radius: 10px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    //  font-family: serif;
+    // color: rgba(128, 128, 128, 0.747);
+    color: darkcyan;
+    margin: 70px 0px 40px;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+}
+
+.log-input {
+    margin: 0px 60px 20px;
+}
+
+input.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    //   border-color: #80bdff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.log-btn {
+    width: 380px;
+    background-color: darkcyan !important;
+    margin-top: 10px;
+
+}
+
+button.btn:focus {
+    box-shadow: none !important;
+}
+
+.labels::after {
+    content: "*";
+    color: red;
+    padding-left: 4px;
+    //  margin-bottom: 5px;
+}
+
+.labels {
+    margin-bottom: 5px;
+}

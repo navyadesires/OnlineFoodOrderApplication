@@ -1,0 +1,36 @@
+<div class="main-container">
+    <div class="log-page">
+        <h1 class="heading"> Login for Restaurant</h1>
+
+        <h2 class="loginaccount" (click)="createRAccount()"> Create an account </h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group log-input">
+                <label for="email" class="labels">Email address</label>
+                <input type="email" class="form-control" name="useremail" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter Email" formControlName="username">
+                <div
+                    *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)">
+                    <small class="userrequired"> Username is Required </small>
+                </div>
+                <div *ngIf="emailErrMessage != undefined && emailErrMessage != '' ">
+                    <small class="userrequired">{{emailErrMessage}} </small>
+                </div>
+            </div>
+
+            <div class="form-group log-input">
+                <label for="exampleInputPassword1" class="labels">Password </label>
+                <input type="password" name="userpwd" formControlName="password" class="form-control" id="pwd"
+                    placeholder="Enter Password">
+                <div
+                    *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                    <small class="userrequired"> Password is required </small>
+                </div>
+                <div *ngIf="pwdErrMessage != undefined && pwdErrMessage != '' ">
+                    <small class="userrequired">{{pwdErrMessage}} </small>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary log-input log-btn">Submit</button>
+        </form>
+    </div>
+</div>

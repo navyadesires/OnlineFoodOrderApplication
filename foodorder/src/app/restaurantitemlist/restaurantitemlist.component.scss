@@ -1,0 +1,116 @@
+.btnitem {
+  background-color: transparent;
+  border: none;
+  color: green
+}
+
+.btndel {
+  background-color: transparent;
+  border: none;
+  color: red
+}
+
+.page-title {
+  font-size: 25px;
+  text-align: left;
+  margin: 10px 0px;
+  color: darkcyan;
+}
+
+.card-img-top {
+  width: 278px;
+  height: 140px;
+}
+
+.tablepro {
+  width: 75%;
+  border-collapse: collapse;
+  // margin-left:50px;
+}
+
+.tablepro td,
+.tablepro th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tablepro th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(98, 98, 192);
+  color: white;
+  text-align: center;
+  padding: 7px;
+}
+
+.tablepro td {
+  text-align: center;
+  padding: 7px;
+}
+
+.card-img-top {
+  width: 50%;
+}
+
+.card {
+  border: 1px solid darkcyan;
+  padding: 7px;
+
+  .resitemlist {
+    padding: 2px;
+
+    b {
+      width: 110px;
+      display: inline-block;
+    }
+  }
+}
+
+.deletebtn {
+  padding: 5px 15px 8px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: wheat;
+  background-color: #198754;
+}
+
+
+////
+
+// .log-input {
+//   margin-top: 25px;
+// }
+
+// .wrapper {
+//   // height: 100vh;
+//   margin-top: 50px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .log-page {
+//   width: 500px;
+//   height: 400px;
+// }
+
+.input-type {
+  width: 175px;
+  float: right;
+}
+
+.labels {
+  margin-bottom: 25px;
+  margin-top: 7px;
+  font-size: 15px;
+  width: 100px;
+  // display: inline-block;
+}
+
+// .labels::after {
+//   content: "*";
+//   color: red;
+//   //  padding-left: 4px;
+//   margin-left: 10px;
+// }

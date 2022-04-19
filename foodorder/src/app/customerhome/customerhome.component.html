@@ -1,0 +1,69 @@
+<div>
+    <app-headingname></app-headingname>
+</div>
+<div class="resImage" style="overflow-x:auto;">
+
+    <div class="home-container-fluid">
+        <div class="slider-background">
+            <div class="slider container">
+                <div class="img-box">
+                    <img height="260" src="./assets/pizza_chinese.webp">
+                </div>
+                <div class="img-box">
+                    <img height="260" src="./assets/big_celebration.webp">
+                </div>
+                <div class="img-box">
+                    <img height="260" src="./assets/coupon_trynew.webp">
+                </div>
+                <div class="img-box">
+                    <img height="260" src="./assets/grab_off.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="text m-3">Choose City for availble Restaurants </h1>
+            </div>
+            <!-- <div class="col-md-3" *ngFor="let res of restarantcitylists"> -->
+            <div class="col-md-4">
+                <div class="dropdown m-3">
+                    <select [(ngModel)]="mySelectCity" (change)="getrestaurantByCity(mySelectCity)"
+                        class="form-control">
+                        <option [ngValue]="null" disabled selected>
+                            <span class="cityclass">
+                                Choose City </span>
+                            <!-- <span class="optionArrow me-2"> ^</span> -->
+                        </option>
+                        <option *ngFor="let res of restarantcitylists">{{res}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="m-3">
+            <div class="row">
+                <div class="col-md-3" *ngFor="let res of finalSelectCity">
+                    <div class="card mb-2">
+                        <div class="card-header">
+                            <img class="card-img-top" [src]="'assets/'+res.restaurantImageName+'.jpg'">
+                            <b>RestuarntName :</b> {{res.restaurantName}}
+                        </div>
+                        <div class="card-body">
+                            <b>Restauant Address </b> : {{res.restaurantAddress}}
+                        </div>
+                        <div class="w-100 p-2">
+                            <button type="button" class="btnText" (click)="onMenu(res)">Menu</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="finalSelectcityShow">
+                    <p>No Restaurants are Availble in {{citySelected}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <app-footer></app-footer>
+    </div>

@@ -1,0 +1,222 @@
+<div class="container-fluid">
+    <div class="register-form row">
+        <div class="col-12">
+            <h1 class="text">Restaurant Register </h1>
+            <div class="registeraccount" (click)="loginCAccount()">login to your account</div>
+
+            <p>Please fill in this form to create an account.</p>
+
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName='restaurantName' name="restaurantName"
+                            placeholder="Restaurant Name">
+                        <div
+                            *ngIf="registerForm.controls['restaurantName'].invalid && (registerForm.controls['restaurantName'].dirty || registerForm.controls['restaurantName'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantName'].errors?.['required']">
+                                Restaurant Name is required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantName'].errors?.['pattern']">
+                                Accepts alphabits only </div>
+                        </div>
+                    </div>
+                    <div class=" form-group">
+                        <input type="address" class="form-control" formControlName='restaurantAddress'
+                            name="restaurantAddress" placeholder="Restaurant Address">
+                        <div
+                            *ngIf="registerForm.controls['restaurantAddress'].invalid && (registerForm.controls['restaurantAddress'].dirty || registerForm.controls['restaurantAddress'].touched)">
+                            <small class="errormessage"> Restaurant Address is Required </small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="city" class="form-control" formControlName='restaurantCity' name="restaurantCity"
+                            placeholder="Restaurant City">
+                        <div
+                            *ngIf="registerForm.controls['restaurantCity'].invalid && (registerForm.controls['restaurantCity'].dirty || registerForm.controls['restaurantCity'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantCity'].errors?.['required']">
+                                Restaurant City is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantCity'].errors?.['pattern']">
+                                Alphabetics only allowed </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="restaurantManagerFirstName"
+                            name="restaurantManagerFirstName" placeholder="Restaurant ManagerFirstName">
+                        <div
+                            *ngIf="registerForm.controls['restaurantManagerFirstName'].invalid && (registerForm.controls['restaurantManagerFirstName'].dirty || registerForm.controls['restaurantManagerFirstName'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerFirstName'].errors?.['required']">
+                                Manager First Name is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerFirstName'].errors?.['pattern']">
+                                Accepts Alphabits Only </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" formControlName='resManagerPwd' name="resManagerPwd"
+                            placeholder="Restaurant Manager Password">
+                        <div
+                            *ngIf="registerForm.controls['resManagerPwd'].invalid && (registerForm.controls['resManagerPwd'].dirty || registerForm.controls['resManagerPwd'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['resManagerPwd'].errors?.['required']">
+                                Manager Password is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['resManagerPwd'].errors?.['pattern']">
+                                Password Accepts 1 Alphabit, 1 numaric </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName='restaurantEmail'
+                            name="restaurantEmail" placeholder="Restaurant Email">
+                        <div
+                            *ngIf="registerForm.controls['restaurantEmail'].invalid && (registerForm.controls['restaurantEmail'].dirty || registerForm.controls['restaurantEmail'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantEmail'].errors?.['required']">
+                                Restaurant Email is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantEmail'].errors?.['pattern']">
+                                Email Accepts 1 Alphabit, 1 numaric </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="restaurantcountry"
+                            name="restaurantcountry" placeholder="Restaurant Country">
+                        <div
+                            *ngIf="registerForm.controls['restaurantcountry'].invalid && (registerForm.controls['restaurantcountry'].dirty || registerForm.controls['restaurantcountry'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantcountry'].errors?.['required']">
+                                Country is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantcountry'].errors?.['pattern']">
+                                Alphabetics only allowed </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName='restaurantPincode'
+                            name="restaurantPincode" placeholder="Restaurant Pincode">
+                        <div
+                            *ngIf="registerForm.controls['restaurantPincode'].invalid && (registerForm.controls['restaurantPincode'].dirty || registerForm.controls['restaurantPincode'].touched)">
+                            <!-- <small class="errormessage"> 6 digits is required for pincode</small> -->
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPincode'].errors?.['required']">
+                                Pincode is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPincode'].errors?.['minlength']">
+                                Pincode Minlength is 6 </div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPincode'].errors?.['maxlength']">
+                                Pincode Maxlength is 6
+                            </div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPincode'].errors?.['pattern']">
+                                Numbers only Required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="restaurantManagerLastName"
+                            name="restaurantManagerLastName" placeholder="Restaurant Manager LastName">
+                        <div
+                            *ngIf="registerForm.controls['restaurantManagerLastName'].invalid && (registerForm.controls['restaurantManagerLastName'].dirty || registerForm.controls['restaurantManagerLastName'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerLastName'].errors?.['required']">
+                                Manager LastName is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerLastName'].errors?.['pattern']">
+                                Accepts alphabits Only </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="restaurantImageName"
+                            name="restaurantImageName" placeholder="Restaurant Image Name">
+                        <div
+                            *ngIf="registerForm.controls['restaurantImageName'].invalid && (registerForm.controls['restaurantImageName'].dirty || registerForm.controls['restaurantImageName'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantImageName'].errors?.['required']">
+                                Manager LastName is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantImageName'].errors?.['pattern']">
+                                Accepts alphabits Only </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class=" form-group">
+                        <input type="password" class="form-control" formControlName='restaurantPassword'
+                            name="restaurantPassword" placeholder="Restaurant Password">
+                        <div
+                            *ngIf="registerForm.controls['restaurantPassword'].invalid && (registerForm.controls['restaurantPassword'].dirty || registerForm.controls['restaurantPassword'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPassword'].errors?.['required']">
+                                Password is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPassword'].errors?.['pattern']">
+                                Password Accepts 1 Alphabit, 1 numaric </div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPassword'].errors?.['minlength']">
+                                Password Minlength is 6 </div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantPassword'].errors?.['maxlength']">
+                                Password Maxlength is 9 </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="restaurantState" name="restaurantState"
+                            placeholder="Restaurant State">
+                        <div
+                            *ngIf="registerForm.controls['restaurantState'].invalid && (registerForm.controls['restaurantState'].dirty || registerForm.controls['restaurantState'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantState'].errors?.['required']">
+                                State is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantState'].errors?.['pattern']">
+                                Alphabetics only allowed </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="restaurantManagerNumber"
+                            name="restaurantManagerNumber" placeholder="Mobile Number">
+                        <div
+                            *ngIf="registerForm.controls['restaurantManagerNumber'].invalid && (registerForm.controls['restaurantManagerNumber'].dirty || registerForm.controls['restaurantManagerNumber'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerNumber'].errors?.['required']">
+                                MobileNumber is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerNumber'].errors?.['minlength']">
+                                MobileNumber Minlength is 10 </div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerNumber'].errors?.['maxlength']">
+                                MobileNumber Maxlength is 10 </div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerNumber'].errors?.['pattern']">
+                                Numbers is Required </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="restaurantManagerEmail"
+                            name="restaurantManagerEmail" placeholder="Restaurant ManagerEmail">
+                        <div
+                            *ngIf="registerForm.controls['restaurantManagerEmail'].invalid && (registerForm.controls['restaurantManagerEmail'].dirty || registerForm.controls['restaurantManagerEmail'].touched)">
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerEmail'].errors?.['required']">
+                                Email is Required</div>
+                            <div class="errormessage"
+                                *ngIf="registerForm.controls['restaurantManagerEmail'].errors?.['pattern']">
+                                Email Accepts 1 Upper letter, 1 Numaric and Special character </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-box mt-2">
+                    <button type="submit" class="btnText text-right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

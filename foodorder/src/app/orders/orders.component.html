@@ -1,0 +1,20 @@
+<div>
+	<app-customerheader></app-customerheader>
+</div>
+<div class="container-fluid">
+	<div class="text fs-4 m-3">Order List</div>
+	<div class="row  ms-1">
+		<p><b>Order Date</b> :<span>{{orderedItemDetails?.createdDate}} </span></p>
+		<p><b>Address</b>:<span>{{orderedItemDetails?.shippingAddress}}</span></p>
+		<p><b>Total</b>:<span>{{orderedItemDetails?.totalPrice}}</span></p>
+		<div class="col-md-3" *ngFor="let item of orderedItemDetails?.items">
+			<div class=" card mb-2">
+
+				<p><b>Item Name</b> :<span>{{item.itemName}}</span></p>
+				<p><b>Item Price</b> :<span>{{item.price}}</span></p>
+				<p><b>Item Quantity</b> : <span>{{item.quantity}} </span></p>
+			</div>
+		</div>
+	</div>
+	<!-- <button class="btnText" (click)="billinform(orderedItemDetails)"> Bill</button> -->
+</div>

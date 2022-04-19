@@ -1,0 +1,170 @@
+<div class="container">
+    <div class="register-form row">
+        <div class="col-12">
+            <div class="register_header">
+                <h1 class="text">Customer Register </h1>
+                <h2 class="registeraccount" (click)="loginCAccount()">login to your account </h2>
+                <p class="fill_form"> Please fill in this form to create an account.</p>
+            </div>
+        </div>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName='customerName' name="customerName"
+                            placeholder="Customer Name">
+                        <div
+                            *ngIf="registerForm.controls['customerName'].invalid && (registerForm.controls['customerName'].dirty || registerForm.controls['customerName'].touched) ">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerName'].errors?.['required']">
+                                Name is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerName'].errors?.['pattern']">
+                                Accepts Alphabits only </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName='customerAge' name="customerAge"
+                            placeholder="Customer Age">
+                        <div
+                            *ngIf="registerForm.controls['customerAge'].invalid && (registerForm.controls['customerAge'].dirty || registerForm.controls['customerAge'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerAge'].errors?.['required']">
+                                Age is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerAge'].errors?.['minlength']">
+                                Age Minlength is 2 </div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerAge'].errors?.['maxlength']">
+                                Age Maxlength is 2 </div>
+                            <div class="colorrequired" *ngIf="registerForm.controls['customerAge'].errors?.['pattern']">
+                                Age Accepts Numbers only </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName='customerState' name="customerState"
+                            placeholder="Customer State">
+                        <div
+                            *ngIf="registerForm.controls['customerState'].invalid && (registerForm.controls['customerState'].dirty || registerForm.controls['customerState'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerState'].errors?.['required']">
+                                State is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerState'].errors?.['pattern']">
+                                Alphabetics is Required </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text-area" class="form-control" formControlName='customerAddress' name="Address"
+                            placeholder="Customer Address">
+                        <div
+                            *ngIf="registerForm.controls['customerAddress'].invalid && (registerForm.controls['customerAddress'].dirty || registerForm.controls['customerAddress'].touched)">
+                            <small class="colorrequired"> Customer Address is required</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName='customerEmail' name="customerEmail"
+                            placeholder="Customer Email">
+                        <div
+                            *ngIf="registerForm.controls['customerEmail'].invalid && (registerForm.controls['customerEmail'].dirty || registerForm.controls['customerEmail'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerEmail'].errors?.['required']">
+                                Email is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerEmail'].errors?.['pattern']">
+                                Email Accepts 1 Alphabit and 1 Number </div>
+                        </div>
+                    </div>
+                    <div class=" form-group">
+                        <input type="text" class="form-control" formControlName='Mobnum' name="customerMobileNumber"
+                            placeholder="Customer MobileNumber">
+                        <div
+                            *ngIf="registerForm.controls['Mobnum'].invalid && (registerForm.controls['Mobnum'].dirty || registerForm.controls['Mobnum'].touched)">
+                            <div class="colorrequired" *ngIf="registerForm.controls['Mobnum'].errors?.['required']">
+                                MobileNumber is Required</div>
+                            <div class="colorrequired" *ngIf="registerForm.controls['Mobnum'].errors?.['minlength']">
+                                Customer
+                                MobileNumber Minlength is 10 </div>
+                            <div class="colorrequired" *ngIf="registerForm.controls['Mobnum'].errors?.['maxlength']">
+                                Customer
+                                MobileNumber Maxlength is 10 </div>
+                            <div class="colorrequired" *ngIf="registerForm.controls['Mobnum'].errors?.['pattern']">
+                                Phonenumber Accepts Alphabtic Only </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="customerCountry" name="customerCountry"
+                            placeholder="Customer Country">
+                        <div
+                            *ngIf="registerForm.controls['customerCountry'].invalid && (registerForm.controls['customerCountry'].dirty || registerForm.controls['customerCountry'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerCountry'].errors?.['required']">
+                                Country is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerCountry'].errors?.['pattern']">
+                                Alphabetics is Required </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <div class=" form-group">
+                        <input type="password" class="form-control" formControlName='customerPassword'
+                            name="customerPassword" placeholder="Customer Password">
+                        <div
+                            *ngIf="registerForm.controls['customerPassword'].invalid && (registerForm.controls['customerPassword'].dirty || registerForm.controls['customerPassword'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPassword'].errors?.['required']">
+                                Password is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPassword'].errors?.['minlength']">
+                                Password Minlength is 8 </div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPassword'].errors?.['pattern']">
+                                Password Accepts 1 Upperletter and 1 number and 1 special symbol </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="customerCity" name="customerCity"
+                            placeholder="Customer City">
+                        <div
+                            *ngIf="registerForm.controls['customerCity'].invalid && (registerForm.controls['customerCity'].dirty || registerForm.controls['customerCity'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerCity'].errors?.['required']">
+                                Customer City is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerCity'].errors?.['pattern']">
+                                Alphabetics is Required </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" formControlName="customerPincode" name="customerPincode"
+                            placeholder="Customer Pincode">
+                        <div
+                            *ngIf="registerForm.controls['customerPincode'].invalid && (registerForm.controls['customerPincode'].dirty || registerForm.controls['customerPincode'].touched)">
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPincode'].errors?.['required']">
+                                Pincode is Required</div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPincode'].errors?.['minlength']">
+                                Pincode Minilength is 6 </div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPincode'].errors?.['maxlength']">
+                                Pincode Maxlength is 6 </div>
+                            <div class="colorrequired"
+                                *ngIf="registerForm.controls['customerPincode'].errors?.['pattern']">
+                                Numbers is Required </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="button-box mt-3">
+                    <button mat-raised-button class="btnText">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
